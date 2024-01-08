@@ -9,13 +9,142 @@
 
 body
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, black, purple, red);
+
+}
+
+.wrapper
+{
+    height: 400px;
+    width: 400px;
+    padding: 25px; /*padding of 25px around*/
+    background: #f8f8f8c2;
+    border-radius: 10px;
+}
+
+/* ul, li, div*/
+.cards, .card, .view
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards 
+{
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between; /*space between each element of the ul*/
+}
+
+.cards .card
+{
+    cursor: grab;
+    position: relative;
+    height: calc(100% / 4 - 10px);
+    width: calc(100% / 4 - 10px);
+}
+    /* perspective: 800px; Applies the same transform as the perspective(<number>) transform function, except that it applies only to the positioned or transformed children of the element, not to the transform on the element itself. */
+    /* transform-style: preserve-3d; */
+    /* transform: rotateY(180deg); */
+
+    .BackView, .FrontView
+    {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+.cards .card .view
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.51);
+    /* background: rgba(222, 184, 135, 0.751); */
+
+}
+
+/*when you want to use '?' symbol instead of the door*/
+/* .card .FrontView
+{
+    color: darkcyan;
+} */
+
+/* .card .BackView
+{
+    transform: rotateY(180deg);
+} */
+
+.card .BackView img
+{
+    max-width: 45px;
+}
+
+/* .card .FrontView
+{
+    display: none;
+} */
+
+/* .card .BackView
+{
+    display: none;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+Import Google Font - Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body
+{
     
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background-image: linear-gradient(to bottom right, black, purple, red);
-    /* background-image: linear-gradient(blue, red); */
+    // do not write : background-image: linear-gradient(blue, red);
 }
 
 .wrapper
@@ -51,7 +180,7 @@ body
     transform-style: preserve-3d;
     width: calc(100% / 4 - 10px);
     height: calc(100% / 4 - 10px);
-    /*oogi boogi onga boonga*/
+    // do not write :  oogi boogi onga boonga
 }
 
 .cards .card .view
@@ -68,7 +197,7 @@ body
 {
     font-size: 45px;
     color: #6563ff;
-    /* color: plum; */
+    // do not write : color: plum;
 }
 
 .card .BackView
@@ -80,10 +209,10 @@ body
     max-width: 45px;
 }
 
-/*moye moye continues bro.. */
+// do not write : moye moye continues bro..
 
 
-.card :hover .BackView
+.card .BackView :hover 
 {
     transform: rotateY(0);
-}
+} */
