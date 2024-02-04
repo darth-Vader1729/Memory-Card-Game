@@ -14,10 +14,15 @@
 </head>
 
 <body>
-    
 
-    <audio src="White_River_-_Aakash_Gandhi.mp3"></audio>
-<!-- ø -->
+    <!-- <audio src="White_River_-_Aakash_Gandhi.mp3"></audio> -->
+    <!-- <embed src="White_River_-_Aakash_Gandhi.mp3" loop="true" autostart="true" width="2" height="0"> -->
+ <!-- ø  -->
+
+    <audio autoplay loop>
+        <source src="White_River_-_Aakash_Gandhi.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
     <body background="images/p2.gif"></body>
     <div class="wrapper">
         <ul class="cards" style="border: none;">     <!-- flip box -->
@@ -171,12 +176,12 @@
         </ul>
     </div>
 
-    <div class="grid-container">
+    <!-- <div class="grid-container">
     </div>
     <p>Score: <span class="score"></span></p>
     <div class="actions">
         <button onclick="restart()">Restart</button>
-    </div>
+    </div> -->
     <script src="script.js"></script>
 
 </body>
