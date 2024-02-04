@@ -1,9 +1,34 @@
-window.addEventListener("DOMContentLoaded", event => {
-    const audio = document.querySelector("audio");
-    audio.volume = 0.2;
-    audio.play();
-  });
+// window.addEventListener("DOMContentLoaded", event => {
+//     const audio = document.querySelector("audio");
+//     audio.volume = 0.2;
+//     audio.play();
+//   });
   
+
+// Get the audio element
+var audio = document.querySelector('audio');
+
+// Pause the audio when the page is clicked
+document.addEventListener('click', function () {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.play();
+    }
+});
+
+
+
+  var promise = document.querySelector('audio').play();
+
+if (promise !== undefined) {
+    promise.then(_ => {
+        // Autoplay started!
+    }).catch(error => {
+        // Autoplay was prevented.
+        // Show a "Play" button so that user can start playback.
+    });
+}
 
 /*
 const cards = document.querySelectorAll(".card");
