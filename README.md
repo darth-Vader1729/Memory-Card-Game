@@ -1,6 +1,6 @@
 # MEMORY CARD GAME
 
-![Demo App](https://ibb.co/b1qm9PZ)
+![Demo App](https://i.ibb.co/p2GwFx8/game-demo-preview.png)
 
 [Check out live ](https://darth-vader1729.github.io/Game-js-demo/)
 
