@@ -1,9 +1,8 @@
 # MEMORY CARD GAME
 
-![Demo App]([https://i.ibb.co/fXmZdnz/Screenshot-10.png](https://darth-vader1729.github.io/Game-js-demo/))
+![Demo App](https://ibb.co/b1qm9PZ)
  <br> 
-[Check out the live demo]([https://youtu.be/HwCqsOis894](https://darth-vader1729.github.io/Game-js-demo/))
-
+[Check out live ](https://darth-vader1729.github.io/Game-js-demo/)
 <br>  <br> 
 
 !([(https://raw.githubusercontent.com/darth-Vader1729/Game-js-demo/refs/heads/main/game_demo_preview.png)])
