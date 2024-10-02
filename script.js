@@ -1,87 +1,5 @@
-// window.addEventListener("DOMContentLoaded", event => {
-//     const audio = document.querySelector("audio");
-//     audio.volume = 0.2;
-//     audio.play();
-//   });
-  
-
 // Get the audio element
 var audio = document.querySelector('audio');
-
-// Pause the audio when the page is clicked
-document.addEventListener('click', function () {
-    if (audio.paused) {
-        audio.play();
-    } else {
-        audio.play();
-    }
-});
-
-
-
-  var promise = document.querySelector('audio').play();
-
-if (promise !== undefined) {
-    promise.then(_ => {
-        // Autoplay started!
-    }).catch(error => {
-        // Autoplay was prevented.
-        // Show a "Play" button so that user can start playback.
-    });
-}
-
-/*
-const cards = document.querySelectorAll(".card");
-
-let cardOne, cardTwo;
-
-function flipCard(e)
-{
-    let clickedCard = e.target; // getting user clicked card
-
-    if(clickedCard !== cardOne)
-    {
-        clickedCard.classList.add("flip");
-        if(!cardOne)
-        {
-            // return the cardOne to clickedCard
-            return cardOne = clickedCard;
-        }
-        // cardOne = clickedCard;
-        cardTwo = clickedCard;
-        
-        let cardOneImg = cardOne.querySelector("img").src, 
-        cardTwoImg = cardTwo.querySelector("img").src;
-
-        matchCards(cardOneImg, cardTwoImg);
-    }
-}
-
-function matchCards(img1, img2)
-{
-    // 
-    if(img1 === img2)
-    {  // if the cards matched
-        return console.log("cards matched");
-    }
-    
-    cardOne.classList.add("shake");
-    cardTwo.classList.add("shake");
-
-}
-
-
-cards.forEach(card => {   // adding click event to all cards
-    card.addEventListener("click", flipCard)
-});
-
-
-// const cards = document.querySelectorAll(".card");
-
-// console.log(cards);
-*/
-
-
 
 
 const cards = document.querySelectorAll('.card');
@@ -110,13 +28,21 @@ const cards = document.querySelectorAll('.card');
 
   function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    isMatch ? disableCards() : unflipCards();
+    if(isMatch) {
+      disableCards();
+      console.log(firstCard.dataset," ",secondCard.dataset);
+    }
+    else {
+      unflipCards();
+    }
   }
 
   function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
 
+    firstCard.classList.add('matched');
+    secondCard.classList.add('matched');
     resetBoard();
   }
 
@@ -126,7 +52,7 @@ const cards = document.querySelectorAll('.card');
       secondCard.classList.remove('flip');
 
       resetBoard();
-    }, 1500);
+    }, 500);
   }
 
   function resetBoard() {
