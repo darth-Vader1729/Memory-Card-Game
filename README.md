@@ -1,14 +1,12 @@
 # MEMORY CARD GAME
 
 ![Demo App](https://ibb.co/b1qm9PZ)
- <br> 
+
 [Check out live ](https://darth-vader1729.github.io/Game-js-demo/)
-<br>  <br> 
 
-!([(https://raw.githubusercontent.com/darth-Vader1729/Game-js-demo/refs/heads/main/game_demo_preview.png)])
 
-**TECH STACK : HTML, CSS, and JavaScript.** <br>
-The objective of the game is to match pairs of cards by flipping them over two at a time. <br> 
+**TECH STACK : HTML, CSS, and JavaScript.** 
+The objective of the game is to match pairs of cards by flipping them over two at a time. 
 If the cards match, they will disappear; otherwise, they will flip back over after a short delay. <br> <br>
 
 ## Features 🚀
