@@ -1,6 +1,7 @@
 // Get the audio element
 var audio = document.querySelector('audio');
 let count_flips = 0;
+let count_matches = 0;
 
 // Update the display
 const flipCountDisplay = document.getElementById('flipCount');
@@ -30,17 +31,15 @@ function flipCard() {
   if (this === firstCard) return;
 
   this.classList.add('flip');
-  
+
   // Increment the flip count
   count_flips++;
   flipCountDisplay.textContent = count_flips; // Update the display
-
+  
   // Start the timer on the first interaction
   if (count_flips === 1) {
     startTimer();
   }
-
-
   if (!hasFlippedCard) {
     hasFlippedCard = true;
     firstCard = this;
@@ -57,6 +56,8 @@ function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
   if (isMatch) {
     disableCards();
+    count_matches++;
+    checkGameOver();
     console.log(firstCard.dataset, " ", secondCard.dataset);
   } else {
     unflipCards();
@@ -70,6 +71,13 @@ function disableCards() {
   firstCard.classList.add('matched');
   secondCard.classList.add('matched');
   resetBoard();
+}
+
+function checkGameOver() {
+  if(count_matches==8)  {
+    clearInterval(timer);
+    resetBoard();
+  }
 }
 
 function unflipCards() {
