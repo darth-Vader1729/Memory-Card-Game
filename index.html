@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
+    <link rel="audio" href="White_River_-_Aakash_Gandhi (online-audio-converter.com).ogg">
 </head>
 
 <body>
@@ -22,9 +22,6 @@
 
 
     <div class="wrapper">
-        <!-- <p>Flip Number: <span id="flipCount">0</span></p>
-        <p>Time Elapsed: <span id="timer">00:00</span></p> -->
-        
         Flip Number: <span id="flipCount">0</span>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         Time Elapsed: <span id="timer">00:00</span>
@@ -174,6 +171,23 @@
                 </div>
             </li>
         </ul>
+    
+        <div class="Replay">
+            <button onclick="location.reload();">Replay Game</button>   
+        </div>
+        
+    
+    </div>
+
+    <div id="gameOverMessage" style="display: none;">
+        <h2>Game Over!</h2>
+        <p>
+            You completed the game in
+            <span id="finalTime"> </span>
+            with
+            <span id="finalFlipCount"> </span>
+            flips!
+        </p>
     </div>
     <script src="script.js"></script>
 

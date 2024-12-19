@@ -153,3 +153,33 @@ backface-visibility: hidden;
     pointer-events: none; /* Prevent interaction */
 }
 
+#gameOverMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+  }
+  
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 70px;
+    margin-left: 90px;
+    background-color: #564409;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  /* .replay {
+    padding: 100px;
+  } */
